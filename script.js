@@ -14,5 +14,17 @@ const calcEur = (value) => {
     return EUR * value;
 }
 
-const eurValue = calcEur(inputValue);
-console.log(eurValue);
+const getEur = calcEur(inputValue);
+
+const calcUsd = (value) => {
+    return USD * value;
+}
+
+const getUsd = calcUsd(inputValue);
+
+const calcCHF = (value) => {
+    return CHF * value;
+}
+
+const getChf = calcCHF(inputValue);
+console.log(getChf);
