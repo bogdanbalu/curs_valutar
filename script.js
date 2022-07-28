@@ -8,11 +8,10 @@ const convertorInput = document.getElementById("convertor");
 
 convertorInput.addEventListener("keydown", () => {
     let currentValue = storageData();
-    console.log(currentValue);
 
-    // calcEur(currentValue);
-    // calcUsd(currentValue);
-    // calcCHF(currentValue);
+    calcEur(currentValue);
+    calcUsd(currentValue);
+    calcCHF(currentValue);
 });
 
 const storageData = () => {
