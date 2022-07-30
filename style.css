@@ -9,8 +9,8 @@ head, body {
 
 .background-color {
     height: 200px;
-    background-color: red;
-    background-image: linear-gradient(to right, red , yellow);
+    background-color: rgb(49, 14, 244);
+    background-image: linear-gradient(to right, rgb(48, 33, 218) , rgb(255, 0, 0));
 }
 
 .title {
@@ -47,7 +47,6 @@ form {
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
