@@ -67,57 +67,57 @@ const storageData = () => {
 
 const calcEur = (value) => {
     const eurValue = value / EUR;
-    return eur.innerHTML = `Valoarea in euro, este: ${eurValue.toFixed(2)}`;
+    eur.innerText = `Valoarea in euro, este: ${eurValue.toFixed(2)}`;
 }
 
 const calcUsd = (value) => {
     const usdValue = value / USD;
-    return usd.innerHTML = `Valoarea in dolari, este: ${usdValue.toFixed(2)}`;
+    usd.innerHTML = `Valoarea in dolari, este: ${usdValue.toFixed(2)}`;
 }
 
 const calcCHF = (value) => {
     const chfValue = value / CHF;
-    return chf.innerHTML = `Valoarea in franci elvetieni, este: ${chfValue.toFixed(2)}`;
+    chf.innerHTML = `Valoarea in franci elvetieni, este: ${chfValue.toFixed(2)}`;
 }
 
 const calcGBP = (value) => {
     const gbpValue = value / GBP;
-    return gbp.innerHTML = `Valoarea in lire sterline, este: ${gbpValue.toFixed(2)}`;
+    gbp.innerHTML = `Valoarea in lire sterline, este: ${gbpValue.toFixed(2)}`;
 }
 
 const calcBGN = (value) => {
     const bgnValue = value / BGN;
-    return bgn.innerHTML = `Valoarea in leva bulgaresti, este: ${bgnValue.toFixed(2)}`;
+    bgn.innerHTML = `Valoarea in leva bulgaresti, este: ${bgnValue.toFixed(2)}`;
 }
 
 const calcNOK = (value) => {
     const nokValue = value / NOK;
-    return nok.innerHTML = `Valoarea in coroana norvegiena, este: ${nokValue.toFixed(2)}`;
+    nok.innerHTML = `Valoarea in coroana norvegiena, este: ${nokValue.toFixed(2)}`;
 }
 
 const calcSEK = (value) => {
     const sekValue = value / SEK;
-    return sek.innerHTML = `Valoarea in coroana suedeza, este: ${sekValue.toFixed(2)}`;
+    sek.innerHTML = `Valoarea in coroana suedeza, este: ${sekValue.toFixed(2)}`;
 }
 
 const calcJPY = (value) => {
     const jpyValue = value / JPY;
-    return jpy.innerHTML = `Valoarea in yeni japonezi, este: ${jpyValue.toFixed(2)}`;
+    jpy.innerHTML = `Valoarea in yeni japonezi, este: ${jpyValue.toFixed(2)}`;
 }
 
 const calcCZK = (value) => {
     const czkValue = value / CZK;
-    return czk.innerHTML = `Valoarea in coroana ceha, este: ${czkValue.toFixed(2)}`;
+    czk.innerHTML = `Valoarea in coroana ceha, este: ${czkValue.toFixed(2)}`;
 }
 
 const calcHUF = (value) => {
     const hufValue = value / HUF;
-    return huf.innerHTML = `Valoarea in forinti maghiari, este: ${hufValue.toFixed(2)}`;
+    huf.innerHTML = `Valoarea in forinti maghiari, este: ${hufValue.toFixed(2)}`;
 }
 
 const calcEGP = (value) => {
     const egpValue = value / EGP;
-    return egp.innerHTML = `Valoarea in lira egiptiana, este: ${egpValue.toFixed(2)}`;
+    egp.innerHTML = `Valoarea in lira egiptiana, este: ${egpValue.toFixed(2)}`;
 }
 
 
