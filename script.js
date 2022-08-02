@@ -55,13 +55,13 @@ const CZK = {
 // Moneda: Forinți maghiari
 const HUF = {
     "value": 100* 1.22,
-    "currency": "forinti maghiari",
+    "currency": "forinti",
 }
 
 //Moneda: Lira egipteană
 const EGP = {
     "value":  0.25,
-    "currency": "lire egiptiane",
+    "currency": "lire egiptene",
 }
 
 const convertorInput = document.getElementById("convertor");
