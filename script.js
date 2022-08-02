@@ -1,35 +1,68 @@
 // Moneda: Euro
-const EUR = 4.93;
+const EUR = {
+    "value": 4.93,
+    "currency": "euro",
+}
 
 //Moneda: Dolar american
-const USD = 4.84;
+const USD = {
+    "value": 4.84,
+    "currency": "dolari",
+}
 
 //Moneda: Franc elvetian
-const CHF = 5.07;
+const CHF = {
+    "value": 5.07,
+    "currency": "franci elvetieni",
+}
 
 // Moneda: Lira sterlină
-const GBP = 5.87;
+const GBP = {
+    "value": 5.87,
+    "currency": "lire sterline",
+}
 
 //Moneda: Leva bulgarească
-const BGN = 2.52;
+const BGN = {
+    "value": 2.52,
+    "currency": "leva bulgaresti",
+}
 
 //Moneda: Coroana norvegiană
-const NOK = 0.49;
+const NOK = {
+    "value": 0.49,
+    "currency": "coroane norvegiene",
+}
 
 // Moneda: Coroana suedeză
-const SEK = 0.47;
+const SEK = {
+    "value": 0.47,
+    "currency": "coroane suedeze",
+}
 
 //Moneda: Yeni japonezi
-const JPY = 100 * 3.62;
+const JPY = {
+    "value": 100 * 3.62,
+    "currency": "yeni japonezi",
+}
 
 //Moneda: Coroana cehă
-const CZK = 0.20;
+const CZK = {
+    "value": 0.20,
+    "currency": "coroane cehe",
+}
 
 // Moneda: Forinți maghiari
-const HUF = 100* 1.22;
+const HUF = {
+    "value": 100* 1.22,
+    "currency": "forinti maghiari",
+}
 
 //Moneda: Lira egipteană
-const EGP = 0.25;
+const EGP = {
+    "value":  0.25,
+    "currency": "lire egiptiane",
+}
 
 const convertorInput = document.getElementById("convertor");
 
@@ -45,79 +78,29 @@ const czk = document.getElementById("czk");
 const huf = document.getElementById("huf");
 const egp = document.getElementById("egp");
 
-convertorInput.addEventListener("keydown", () => {
-    let currentValue = storageData();
+convertorInput.addEventListener("keyup", () => {
+    let currentValue = getInputData();
 
-    calcEur(currentValue);
-    calcUsd(currentValue);
-    calcCHF(currentValue);
-    calcGBP(currentValue);
-    calcBGN(currentValue);
-    calcNOK(currentValue);
-    calcSEK(currentValue);
-    calcJPY(currentValue);
-    calcCZK(currentValue);
-    calcHUF(currentValue);
-    calcEGP(currentValue);
+    calculatedExchange(currentValue, EUR.currency, EUR.value, eur);
+    calculatedExchange(currentValue, USD.currency, USD.value, usd);
+    calculatedExchange(currentValue, CHF.currency, CHF.value, chf);
+    calculatedExchange(currentValue, GBP.currency, GBP.value, gbp);
+    calculatedExchange(currentValue, BGN.currency, BGN.value, bgn);
+    calculatedExchange(currentValue, NOK.currency, NOK.value, nok);
+    calculatedExchange(currentValue, SEK.currency, SEK.value, sek);
+    calculatedExchange(currentValue, JPY.currency, JPY.value, jpy);
+    calculatedExchange(currentValue, CZK.currency, CZK.value, czk);
+    calculatedExchange(currentValue, HUF.currency, HUF.value, huf);
+    calculatedExchange(currentValue, EGP.currency, EGP.value, egp);
 });
 
-const storageData = () => {
-    return convertorInput.value;
+const getInputData = () => {
+    return Number(convertorInput.value);
 }
 
-const calcEur = (value) => {
-    const eurValue = value / EUR;
-    eur.innerText = `Valoarea in euro, este: ${eurValue.toFixed(2)}`;
-}
-
-const calcUsd = (value) => {
-    const usdValue = value / USD;
-    usd.innerText = `Valoarea in dolari, este: ${usdValue.toFixed(2)}`;
-}
-
-const calcCHF = (value) => {
-    const chfValue = value / CHF;
-    chf.innerText = `Valoarea in franci elvetieni, este: ${chfValue.toFixed(2)}`;
-}
-
-const calcGBP = (value) => {
-    const gbpValue = value / GBP;
-    gbp.innerText = `Valoarea in lire sterline, este: ${gbpValue.toFixed(2)}`;
-}
-
-const calcBGN = (value) => {
-    const bgnValue = value / BGN;
-    bgn.innerText = `Valoarea in leva bulgaresti, este: ${bgnValue.toFixed(2)}`;
-}
-
-const calcNOK = (value) => {
-    const nokValue = value / NOK;
-    nok.innerText = `Valoarea in coroana norvegiena, este: ${nokValue.toFixed(2)}`;
-}
-
-const calcSEK = (value) => {
-    const sekValue = value / SEK;
-    sek.innerText = `Valoarea in coroana suedeza, este: ${sekValue.toFixed(2)}`;
-}
-
-const calcJPY = (value) => {
-    const jpyValue = value / JPY;
-    jpy.innerText = `Valoarea in yeni japonezi, este: ${jpyValue.toFixed(2)}`;
-}
-
-const calcCZK = (value) => {
-    const czkValue = value / CZK;
-    czk.innerText = `Valoarea in coroana ceha, este: ${czkValue.toFixed(2)}`;
-}
-
-const calcHUF = (value) => {
-    const hufValue = value / HUF;
-    huf.innerText = `Valoarea in forinti maghiari, este: ${hufValue.toFixed(2)}`;
-}
-
-const calcEGP = (value) => {
-    const egpValue = value / EGP;
-    egp.innerText = `Valoarea in lira egiptiana, este: ${egpValue.toFixed(2)}`;
+const calculatedExchange = (value, currency, rateOfExchange, inputName,  ) => {
+    const exchange = value / rateOfExchange;
+    inputName.innerText = `Valoarea in ${currency}, este: ${exchange.toFixed(2)}`; 
 }
 
 
